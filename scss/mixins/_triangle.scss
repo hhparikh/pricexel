@@ -1,0 +1,31 @@
+@mixin triangle-top-left($color, $width, $height) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $height $width 0 0;
+  border-color: $color transparent transparent transparent;
+}
+
+@mixin triangle-top-right($color, $width, $height) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $width $height 0;
+  border-color: transparent $color transparent transparent;
+}
+
+@mixin triangle-bottom-left($color, $width, $height) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $height 0 0 $width;
+  border-color: transparent transparent transparent $color;
+}
+
+@mixin triangle-bottom-right($color, $width, $height) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 $height $width;
+  border-color: transparent transparent $color transparent;
+}

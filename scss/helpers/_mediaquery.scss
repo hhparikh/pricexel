@@ -1,0 +1,306 @@
+@media only screen and (max-width: $screen-md){
+	.container{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	body > header{
+		.social{
+			left: 20px;
+			top: 20px;
+		}
+	}
+	
+	body > section{
+		
+		> header{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		
+		&.subscribe{
+			form:after{
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $screen-md - 1px) and (min-width: $max-width + 1px){
+	body > section{
+		&.gallery{
+			.image:not(.medium) a img{
+				height: 100%;
+				width: auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $max-width){
+	.fade-in{
+		transform: translateX(-50%);
+		&:nth-child(odd){
+			transform: translateX(-50%);
+		}
+		&:nth-child(even){
+			transform: translateX(50%);
+		}
+	}
+	
+	.columns{
+		margin: 0;
+	}
+	
+	.third, .two-thirds{
+		width: 100%;
+		padding: 0;
+		float: none !important;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 500px;
+		
+		+ .third{
+			margin-top: 30px;
+			&.place{margin-top: 60px;}
+		}
+	}
+	
+	body > section{
+		&.contacts{
+			padding-bottom: 200px;
+			
+			form{
+				p:last-child{text-align: center;}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $screen-sm){
+	h1{
+		font-size: 40px;
+		line-height: 40px;
+	}	
+	
+	h2{
+		font-size: 23px;
+		line-height: 23px;
+	}
+	
+	h3{
+		font-size: 23px;
+		line-height: normal;
+	}
+	
+	body > section{
+		> header{
+			h1{
+				line-height: 40px;
+			}	
+			
+			h2{
+				line-height: 23px;
+			}
+		}
+		
+		&.hero{
+			header{
+				h1{
+					line-height: 90px;
+				}
+			}
+		}
+		&.video{
+			.two-thirds{
+				padding: 35px 0 56.25% !important;
+			}
+		}
+		&.contacts:after{
+			background-position: center 314px;
+		}
+	}
+}
+
+@media only screen and (max-width: $screen-xs){
+	h1{
+		font-size: 35px;
+		line-height: 35px;
+	}
+	
+	
+	h2{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	
+	h3{
+		font-size: 20px;
+	}
+	
+	.line{
+		
+	}
+	
+	body > header{
+		.social{
+			display: none;
+		}
+	}
+	
+	body > section{
+		> header{
+			margin-bottom: 30px;
+			h1{
+				line-height: 35px;
+			}	
+			
+			h2{
+				line-height: 20px;
+			}
+		}
+		&.hero{
+			padding-top: 200px;
+			
+			header{
+				height: auto;
+				padding-bottom: 40px;
+				h1{
+					position: relative;
+					left: auto;
+					transform: none;
+					font-size: 70px;
+					line-height: 70px !important;
+					
+					span{
+						display: block;
+						position: relative;
+						left: auto !important;
+						top: auto !important;
+						bottom: auto !important;
+						right: auto !important;
+					}
+				}
+			}
+		}
+		&.subscribe{
+			form{						
+				input{
+					width: 100%;
+					float: none;
+				}
+				button{
+					display: block;
+					width: 100%;
+					max-width: 180px;
+					margin: 20px auto;
+					float: none;
+				}
+			}
+		}
+		&.call-to-action{
+			> header{
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $screen-xxs){
+	h1{
+		font-size: 30px;
+		line-height: 30px;
+	}
+	
+	body > section{
+		> header{
+			h1{
+				line-height: 30px;
+			}	
+		}
+		
+		&.hero{
+			
+			header{
+				h1{
+					font-size: 50px;
+					line-height: 50px !important;
+					
+					span{
+						font-size: 20px;
+						line-height: 20px;
+					}
+				}
+			}
+			
+			.button{
+				max-width: 200px;
+				display: block;
+				margin: 0 auto;
+				+ .button{margin-top: 20px;}
+			}
+		}
+		
+		&.call-to-action{
+			> header{
+				margin-bottom: 20px;
+			}
+		}
+		
+		&.contacts{
+			&:after{
+				display: none;
+			}
+			.contact-info{
+				p{
+					padding-top: 10px;
+					padding-bottom: 10px;
+					line-height: normal;
+				}
+			}
+		}
+	}
+	
+	body > .msg{
+		font-size: 18px;
+		line-height: 20px;
+		padding: 15px;
+		strong{display: block;}
+	}
+}
+
+@media only screen and (max-width: $screen-xxs - 40px){
+	body > section{
+		&.call-to-action{
+			padding-top: 130px;
+		}
+	}
+	body > .msg{
+		font-size: 16px;
+	}
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx){
+	
+	.sprite{
+		background-image: url('../images/icons@2x.png');
+		background-size: $sprite-w $sprite-h;
+	}
+	
+	.proglyphs{
+		background: url('../images/proglyphs@2x.png') no-repeat 0 0;
+		background-size: 80px 240px;
+	}
+	
+	body > header .brand:before{
+		background-image: url('../images/logo-bg@2x.png');
+		background-size: 162px 156px;
+	}
+}
